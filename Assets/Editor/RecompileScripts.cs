@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine.TestTools;
 
-namespace Microsoft.Unity.VisualStudio.Standalone.EditorTests
+namespace Superb.Ide.Antigravity.Standalone.EditorTests
 {
 	public class RecompileScripts : IEditModeTestYieldInstruction
 	{

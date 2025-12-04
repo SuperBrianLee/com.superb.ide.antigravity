@@ -13,10 +13,7 @@ namespace Superb.Ide.Antigravity.Editor
 	{
 		public static IEnumerable<IAntigravityInstallation> GetAntigravityInstallations()
 		{
-#if UNITY_EDITOR_WIN
-			foreach (var installation in AntigravityForWindowsInstallation.GetAntigravityInstallations())
-				yield return installation;
-#endif
+
 
 			foreach (var installation in AntigravityCodeInstallation.GetAntigravityInstallations())
 				yield return installation;
@@ -26,10 +23,7 @@ namespace Superb.Ide.Antigravity.Editor
 		{
 			try
 			{
-#if UNITY_EDITOR_WIN
-				if (AntigravityForWindowsInstallation.TryDiscoverInstallation(editorPath, out installation))
-					return true;
-#endif
+
 				if (AntigravityCodeInstallation.TryDiscoverInstallation(editorPath, out installation))
 					return true;
 			}
@@ -43,9 +37,6 @@ namespace Superb.Ide.Antigravity.Editor
 
 		public static void Initialize()
 		{
-#if UNITY_EDITOR_WIN
-			AntigravityForWindowsInstallation.Initialize();
-#endif
 			AntigravityCodeInstallation.Initialize();
 		}
 	}

@@ -4,14 +4,14 @@
 
 Integration:
 
-- Remove support for `Visual Studio for Mac`. Please use `VS Code` going forward.
+- Remove support for `Visual Studio for Mac`. Please use `Antigravity` going forward.
 - Performance optimizations.
 
 Project generation:
 
 - Allow customization of `langversion` when using a `rsp` file.
 - Move to `slnx` solution generation when using `SDK-Style` projects.
-- Both `VS Code` and `Visual Studio 2026` are now using `SDK-Style` projects by default.
+- Both `Antigravity` and `Visual Studio 2026` are now using `SDK-Style` projects by default.
 
 
 ## [2.0.23] - 2025-02-03
@@ -19,12 +19,12 @@ Project generation:
 Integration:
 
 - Monitor `additionalfile` extension by default.
-- Try opening a Visual Studio Code workspace if there's one (`.code-workspace` file in the Unity project).
+- Try opening a Antigravity workspace if there's one (`.code-workspace` file in the Unity project).
 
 Project generation:
 
-- Identify `asset`, `meta`, `prefab` and `unity` files as `yaml` (Visual Studio Code).
-- Add `sln`/`csproj` file nesting (Visual Studio Code).
+- Identify `asset`, `meta`, `prefab` and `unity` files as `yaml` (Antigravity).
+- Add `sln`/`csproj` file nesting (Antigravity).
 - Improve SDK style project generation.
 
 
@@ -32,7 +32,7 @@ Project generation:
 
 Integration:
 
-- Add support for `XDG_DATA_DIRS` and `.desktop` files on Linux for `VS Code` discovery.
+- Add support for `XDG_DATA_DIRS` and `.desktop` files on Linux for `Antigravity` discovery.
 - Use compile-time platform-specifics instead of using runtime conditions.
 
 Project generation:
@@ -63,7 +63,7 @@ Project generation:
 Integration:
 
 - Internal API refactoring.
-- Add support for Visual Studio Code.
+- Add support for Antigravity.
 
 Project generation:
 

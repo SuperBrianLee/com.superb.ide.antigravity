@@ -3,7 +3,10 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEditor.Compilation;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+using Superb.Ide.Antigravity.Editor;
+
+
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	public class AssemblyNameProviderTests
 	{
@@ -60,8 +63,8 @@ namespace Microsoft.Unity.VisualStudio.Editor.Tests
             var editorAssemblies = CompilationPipeline.GetAssemblies(AssembliesType.Editor);
             var collectedAssemblies = m_AssemblyNameProvider.GetAssemblies(s => true).ToList();
 
-            var editorTestAssembly = editorAssemblies.Single(a => a.name == "Unity.VisualStudio.EditorTests");
-            Assert.AreEqual("Microsoft.Unity.VisualStudio.Editor.Tests", editorTestAssembly.rootNamespace);
+            var editorTestAssembly = editorAssemblies.Single(a => a.name == "Superb.Antigravity.EditorTests");
+            Assert.AreEqual("Superb.Ide.Antigravity.Editor.Tests", editorTestAssembly.rootNamespace);
 
             var collectedTestAssembly = collectedAssemblies.Single(a => a.name == editorTestAssembly.name);
             Assert.AreEqual(editorTestAssembly.rootNamespace, collectedTestAssembly.rootNamespace);

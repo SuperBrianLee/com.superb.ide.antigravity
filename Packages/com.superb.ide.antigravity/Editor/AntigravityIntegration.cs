@@ -32,7 +32,7 @@ namespace Superb.Ide.Antigravity.Editor
 		private static readonly object _incomingLock = new object();
 		private static readonly object _clientsLock = new object();
 
-		static VisualStudioIntegration()
+		static AntigravityIntegration()
 		{
 			if (!AntigravityEditor.IsEnabled)
 				return;

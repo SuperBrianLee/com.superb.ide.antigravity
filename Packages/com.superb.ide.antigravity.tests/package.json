@@ -1,0 +1,12 @@
+{
+  "type": "tests",
+  "name": "com.superb.ide.antigravity.tests",
+  "displayName": "Antigravity Editor Tests",
+  "description": "Tests for Antigravity Editor integration.",
+  "version": "2.0.24",
+  "unity": "2019.4",
+  "unityRelease": "25f1",
+  "dependencies": {
+    "nuget.moq": "1.0.0"
+  }
+}

@@ -12,8 +12,8 @@ using UnityEditor;
 using UnityEngine;
 using Unity.CodeEditor;
 
-[assembly: InternalsVisibleTo("Unity.VisualStudio.EditorTests")]
-[assembly: InternalsVisibleTo("Unity.VisualStudio.Standalone.EditorTests")]
+[assembly: InternalsVisibleTo("Superb.Antigravity.EditorTests")]
+[assembly: InternalsVisibleTo("Superb.Antigravity.Standalone.EditorTests")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 namespace Superb.Ide.Antigravity.Editor
@@ -29,7 +29,7 @@ namespace Superb.Ide.Antigravity.Editor
 
 		private static readonly AsyncOperation<Dictionary<string, IAntigravityInstallation>> _discoverInstallations;
 
-		static VisualStudioEditor()
+		static AntigravityEditor()
 		{
 			if (!UnityInstallation.IsMainUnityEditorProcess)
 				return;
@@ -39,28 +39,6 @@ namespace Superb.Ide.Antigravity.Editor
 
 			_discoverInstallations = AsyncOperation<Dictionary<string, IAntigravityInstallation>>.Run(DiscoverInstallations);
 		}
-
-#if UNITY_2019_4_OR_NEWER && !UNITY_2020
-		[InitializeOnLoadMethod]
-		static void LegacyVisualStudioCodePackageDisabler()
-		{
-			// disable legacy Visual Studio Code packages
-			var editor = CodeEditor.Editor.GetCodeEditorForPath("code.cmd");
-			if (editor == null)
-				return;
-
-			if (editor is AntigravityEditor)
-				return;
-
-			// only disable the com.unity.ide.vscode package
-			var assembly = editor.GetType().Assembly;
-			var assemblyName = assembly.GetName().Name;
-			if (assemblyName != "Unity.VSCode.Editor")
-				return;
-
-			CodeEditor.Unregister(editor);
-		}
-#endif
 
 		private static Dictionary<string, IAntigravityInstallation> DiscoverInstallations()
 		{
@@ -83,7 +61,7 @@ namespace Superb.Ide.Antigravity.Editor
 		// keeping it for now given it is public, so we need a major bump to remove it 
 		public void CreateIfDoesntExist()
 		{
-			if (!TryGetVisualStudioInstallationForPath(CodeEditor.CurrentEditorInstallation, true, out var installation))
+			if (!TryGetAntigravityInstallationForPath(CodeEditor.CurrentEditorInstallation, true, out var installation))
 				return;
 
 			var generator = installation.ProjectGenerator;

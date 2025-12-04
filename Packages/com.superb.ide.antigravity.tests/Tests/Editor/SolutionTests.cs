@@ -1,7 +1,9 @@
 using NUnit.Framework;
 using UnityEditor.Compilation;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+
+
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	namespace SolutionGeneration
 	{

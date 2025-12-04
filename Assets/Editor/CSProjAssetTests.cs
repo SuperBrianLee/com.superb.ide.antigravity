@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading;
-using Microsoft.Unity.VisualStudio.Editor;
+using Superb.Ide.Antigravity.Editor;
+
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Microsoft.Unity.VisualStudio.Standalone.EditorTests
+namespace Superb.Ide.Antigravity.Standalone.EditorTests
 {
 	[TestFixture]
 	[Serializable]

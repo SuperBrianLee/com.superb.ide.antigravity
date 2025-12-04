@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+
+
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	public class MockFileIO : IFileIO
 	{

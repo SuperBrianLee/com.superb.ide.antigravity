@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using Unity.CodeEditor;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	class SolutionGenerationTestBase
 	{

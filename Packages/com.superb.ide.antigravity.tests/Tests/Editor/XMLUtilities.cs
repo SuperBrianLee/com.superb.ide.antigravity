@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	public static class XMLUtilities
 	{

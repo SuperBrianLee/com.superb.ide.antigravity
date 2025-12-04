@@ -1,10 +1,10 @@
 {
-    "name": "Unity.VisualStudio.Standalone.EditorTests",
+    "name": "Superb.Antigravity.EditorTests",
+    "rootNamespace": "Superb.Ide.Antigravity.Editor.Tests",
     "references": [
-        "Unity.VisualStudio.Editor",
+        "Superb.Antigravity.Editor",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "Unity.PackageValidationSuite.Editor"
+        "UnityEditor.TestRunner"
     ],
     "includePlatforms": [
         "Editor"
@@ -14,8 +14,7 @@
     "overrideReferences": true,
     "precompiledReferences": [
         "Moq.dll",
-        "nunit.framework.dll",
-        ""
+        "nunit.framework.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [
@@ -23,4 +22,4 @@
     ],
     "versionDefines": [],
     "noEngineReferences": false
-}  
+}

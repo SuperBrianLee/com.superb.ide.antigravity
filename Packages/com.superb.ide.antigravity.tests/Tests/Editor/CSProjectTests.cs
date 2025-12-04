@@ -8,7 +8,7 @@ using UnityEditor;
 using UnityEditor.Compilation;
 using UnityEngine;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	namespace CSProjectGeneration
 	{

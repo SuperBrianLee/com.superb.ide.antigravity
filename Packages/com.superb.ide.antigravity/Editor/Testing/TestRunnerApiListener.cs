@@ -13,7 +13,7 @@ namespace Superb.Ide.Antigravity.Editor.Testing
 
 		static TestRunnerApiListener()
 		{
-			if (!VisualStudioEditor.IsEnabled)
+			if (!AntigravityEditor.IsEnabled)
 				return;
 
 			_testRunnerApi = ScriptableObject.CreateInstance<TestRunnerApi>();

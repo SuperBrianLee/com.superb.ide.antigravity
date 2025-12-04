@@ -5,7 +5,10 @@ using Moq;
 using Unity.CodeEditor;
 using UnityEditor.Compilation;
 
-namespace Microsoft.Unity.VisualStudio.Editor.Tests
+using Superb.Ide.Antigravity.Editor;
+
+
+namespace Superb.Ide.Antigravity.Editor.Tests
 {
 	class SynchronizerBuilder
 	{
@@ -131,7 +134,7 @@ namespace Microsoft.Unity.VisualStudio.Editor.Tests
 			CodeEditor.Register(m_MockExternalCodeEditor);
 
 			return this;
-		}		
+		}
 
 		public SynchronizerBuilder WithAssembly(Assembly assembly)
 		{
@@ -229,7 +232,7 @@ namespace Microsoft.Unity.VisualStudio.Editor.Tests
 		}
 #endif
 
-		public class MyMockIExternalCodeEditor : VisualStudioEditor
+		public class MyMockIExternalCodeEditor : AntigravityEditor
 		{
 			private Version LatestLanguageVersionSupported = new Version(7, 3);
 			public MyMockIExternalCodeEditor(Version version = null)
@@ -248,9 +251,9 @@ namespace Microsoft.Unity.VisualStudio.Editor.Tests
 				return true;
 			}
 
-			internal override bool TryGetVisualStudioInstallationForPath(string editorPath, bool lookupDiscoveredInstallations, out IVisualStudioInstallation installation)
+			internal override bool TryGetAntigravityInstallationForPath(string editorPath, bool lookupDiscoveredInstallations, out IAntigravityInstallation installation)
 			{
-				var mock = new Mock<IVisualStudioInstallation>();
+				var mock = new Mock<IAntigravityInstallation>();
 				mock.Setup(x => x.SupportsAnalyzers).Returns(true);
 				mock.Setup(x => x.LatestLanguageVersionSupported).Returns(() => LatestLanguageVersionSupported);
 
